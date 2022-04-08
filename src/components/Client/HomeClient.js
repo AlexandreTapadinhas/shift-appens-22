@@ -29,7 +29,7 @@ const Home = ({ user, events }) => {
         <div className="pt-6 pl-8 pb-6 text-xl">
           <button onClick={() => auth.signOut()}>Sign out</button>
         </div>
-        <div className="flex justify-center pt-10">
+        <div className="pl-10 sm:justify-center pt-10 grid 2xl:grid-cols-4 gap-4 xl:grid-cols-3 md:grid-cols-2 ">
           {events.map(({ id, data }) => (
             <CustomListEvent
               key={id}
