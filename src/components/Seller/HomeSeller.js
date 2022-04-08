@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { db, auth } from "../services/firebase";
+import { db, auth } from "../../services/firebase";
 import { doc, onSnapshot } from "firebase/firestore";
-
-import "../App.css";
 
 const Home = ({ user }) => {
   const [balance, setBalance] = useState("");
@@ -17,7 +15,7 @@ const Home = ({ user }) => {
   return (
     <div className="home">
       <h1>
-        Hello, <span></span>
+        Hello, Seller<span></span>
         {user.displayName} <br />
         {balance}
       </h1>
