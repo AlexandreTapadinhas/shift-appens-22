@@ -13,13 +13,13 @@ const Home = ({ user }) => {
   }, []);
 
   return (
-    <div className="home">
-      <h1>
+    <div className="flex flex-row">
+      <h1 className="text-2xl">
         Hello, Seller<span></span>
         {user.displayName} <br />
         {balance}
       </h1>
-      <img src={user.photoURL} alt="" />
+      <img className="rounded-full" src={user.photoURL} alt="" />
       <button onClick={() => auth.signOut()}>Sign out</button>
     </div>
   );

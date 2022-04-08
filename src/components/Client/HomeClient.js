@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { db, auth } from "../../services/firebase";
 import { doc, onSnapshot } from "firebase/firestore";
 
-const Home = ({ user }) => {
+import CustomListEvent from "./components/CustomListEvent";
+
+const Home = ({ user, events }) => {
   const [balance, setBalance] = useState("");
 
   useEffect(() => {
@@ -27,7 +29,18 @@ const Home = ({ user }) => {
         <div className="pt-6 pl-8 pb-6 text-xl">
           <button onClick={() => auth.signOut()}>Sign out</button>
         </div>
-        <div></div>
+        <div className="flex justify-center pt-10">
+          {events.map(({ id, data }) => (
+            <CustomListEvent
+              key={id}
+              title={data.title}
+              timeStart={data.timeStart}
+              timeEnd={data.timeEnd}
+              description={data.description}
+              photo={data.photo}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
