@@ -1,20 +1,28 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
-import { auth } from "../services/firebase";
+import { db, auth } from "../services/firebase";
+import { doc, onSnapshot } from "firebase/firestore";
 
 import "../App.css";
 
 const Home = ({ user }) => {
+  const [balance, setBalance] = useState("");
+
+  useEffect(() => {
+    onSnapshot(doc(db, "users", user.uid), (doc) => {
+      setBalance(doc.data().balance);
+    });
+  }, []);
+
   return (
     <div className="home">
       <h1>
         Hello, <span></span>
-        {user.displayName}
+        {user.displayName} <br />
+        {balance}
       </h1>
       <img src={user.photoURL} alt="" />
-      <button className="button signout" onClick={() => auth.signOut()}>
-        Sign out
-      </button>
+      <button onClick={() => auth.signOut()}>Sign out</button>
     </div>
   );
 };
