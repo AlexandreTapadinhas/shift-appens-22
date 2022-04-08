@@ -1,2 +1,7 @@
-# shift-appens-22
-Shift Appens 2022 - shiftappens.com
+# Reservas
+
+Shift APPens
+
+## How to install
+
+npm i
