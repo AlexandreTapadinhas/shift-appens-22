@@ -13,14 +13,22 @@ const Home = ({ user }) => {
   }, []);
 
   return (
-    <div className="home">
-      <h1>
-        Hello, <span></span>
-        {user.displayName} <br />
-        {balance}
-      </h1>
-      <img src={user.photoURL} alt="" />
-      <button onClick={() => auth.signOut()}>Sign out</button>
+    <div className="">
+      <div className="flex flex-row pt-6 pl-6">
+        <img className="rounded-full" src={user.photoURL} alt="" />
+        <div className="pl-8 pt-2">
+          <h1 className="text-2xl font-bold">
+            {user.displayName} <br />
+          </h1>
+          <h1 className="text-xl">Saldo: {balance}€</h1>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 divide-y-2 divide-gray-600">
+        <div className="pt-6 pl-8 pb-6 text-xl">
+          <button onClick={() => auth.signOut()}>Sign out</button>
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 };
