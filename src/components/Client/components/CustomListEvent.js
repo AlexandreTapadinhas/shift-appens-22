@@ -18,7 +18,7 @@ const CustomListEvent = ({
           </div>
           <div class="font-bold text-xl mb-2">Fim: {timeEnd}</div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

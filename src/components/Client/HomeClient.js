@@ -70,7 +70,12 @@ const Home = ({ user, events, header }) => {
     } else {
       return (
         <div className="flex justify-center text-center">
-          <Event user={user} events={events} eventInfo={eventInfo} />
+          <Event
+            user={user}
+            events={events}
+            eventInfo={eventInfo}
+            eventID={eventSelected}
+          />
         </div>
       );
     }
