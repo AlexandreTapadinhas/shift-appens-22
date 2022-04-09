@@ -24,6 +24,7 @@ const Login = () => {
                 photoURL: user.photoURL,
                 balance: "0",
                 type: "0",
+                uid: user.uid,
               })
               .catch((error) => alert(error.message));
           }
