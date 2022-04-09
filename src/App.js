@@ -43,7 +43,9 @@ function App() {
         <Login />
       ) : (
         <>
-          {userType === "0" ? <HomeClient user={user} events={events} /> : null}
+          {userType === "0" ? (
+            <HomeClient user={user} events={events} header={true} />
+          ) : null}
           {userType === "1" ? <HomeSeller user={user} /> : null}
           {userType === "2" ? <HomeAdmin user={user} /> : null}
         </>
