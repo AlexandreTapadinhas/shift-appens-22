@@ -23,6 +23,7 @@ const Login = () => {
                 email: user.email,
                 photoURL: user.photoURL,
                 balance: "0",
+                type: "0",
               })
               .catch((error) => alert(error.message));
           }
