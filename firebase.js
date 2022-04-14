@@ -3,13 +3,13 @@ import "firebase/auth";
 import firebase from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAwmby_ZwmUDBh60GOEvCmntypHlPKn1hw",
-  authDomain: "talks-aa371.firebaseapp.com",
-  projectId: "talks-aa371",
-  storageBucket: "talks-aa371.appspot.com",
-  messagingSenderId: "984922230568",
-  appId: "1:984922230568:web:29c40993ccb567d0458a1d",
-  measurementId: "G-0BE1D54GCT",
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: "",
 };
 let app;
 if (firebase.apps.length === 0) {
